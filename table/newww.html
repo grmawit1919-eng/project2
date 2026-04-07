@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculator</title>
+    <style>
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 100px);
+            gap: 2px;
+            padding: 20px;
+            background: #f0f0f0;
+        }
+
+        .span-two {
+            grid-column: span 2;
+        }
+
+        .output {
+            grid-column: 1 / -1;
+            background-color: blueviolet;
+            display: flex;
+            align-items: flex-end;
+            flex-direction: column;
+            padding: 10px;
+            min-height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .previous-operand {
+            color: azure;
+            font-size: 1.2rem;
+        }
+
+        .current-operand {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 20px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator-grid">
+        <div class="output">
+            <div class="previous-operand"></div>
+            <div class="current-operand">0</div>
+        </div>
+        <button class="span-two" onclick="clearAll()">AC</button>
+        <button onclick="deleteLast()">DEL</button>
+        <button onclick="appendOp('/')">÷</button>
+        <button onclick="appendNum('1')">1</button>
+        <button onclick="appendNum('2')">2</button>
+        <button onclick="appendNum('3')">3</button>
+        <button onclick="appendOp('*')">*</button>
+        <button onclick="appendNum('4')">4</button>
+        <button onclick="appendNum('5')">5</button>
+        <button onclick="appendNum('6')">6</button>
+        <button onclick="appendOp('+')">+</button>
+        <button onclick="appendNum('7')">7</button>
+        <button onclick="appendNum('8')">8</button>
+        <button onclick="appendNum('9')">9</button>
+        <button onclick="appendOp('-')">-</button>
+        <button onclick="appendNum('.')">.</button>
+        <button onclick="appendNum('0')">0</button>
+        <button class="span-two" onclick="calculate()">=</button>
+    </div>
+
+    <script>
+        let current = '';
+        let previous = '';
+        let operation = null;
+
+        const prevDisplay = document.querySelector('.previous-operand');
+        const currDisplay = document.querySelector('.current-operand');
+
+        function updateDisplay() {
+            currDisplay.innerText = current || '0';
+            prevDisplay.innerText = previous + (operation || '');
+        }
+
+        function appendNum(num) {
+            if (num === '.' && current.includes('.')) return;
+            current += num;
+            updateDisplay();
+        }
+
+        function appendOp(op) {
+            if (current === '') return;
+            if (previous !== '') calculate();
+            operation = op;
+            previous = current;
+            current = '';
+            updateDisplay();
+        }
+
+        function calculate() {
+            if (previous === ''  current === ''  !operation) return;
+            let result;
+            const a = parseFloat(previous);
+            const b = parseFloat(current);
+            
+            if (operation === '+') result = a + b;
+            else if (operation === '-') result = a - b;
+            else if (operation === '*') result = a * b;
+            else if (operation === '/') result = b !== 0 ? a / b : 'Error';
+            
+            current = result.toString();
+            previous = '';
+            operation = null;
+            updateDisplay();
+        }
+
+        function clearAll() {
+            current = '';
+            previous = '';
+            operation = null;
+            updateDisplay();
+        }
+
+        function deleteLast() {
+            current = current.slice(0, -1);
+            updateDisplay();
+        }
+    </script>
+</body>
+</html>

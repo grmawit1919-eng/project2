@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      section {
+        border: 2px solid ;
+         background-color: skyblue;
+         margin-bottom: 20px;
+        
+       }
+       #p1 {
+background-color: green;
+       }
+       .pp{
+      display: flex;
+      flex-direction: row;
+    gap: 5px;
+    
+      
+       }
+       #p2{
+      
+        background-color: yellow;
+      
+       }
+       #p3{
+         
+        background-color: yellow;
+       }
+       .p4 {
+        border-width: 10px ;
+       background-color: red;
+       margin-top: -10px;
+
+       }
+       .bb{
+ display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 5px;
+       }
+       .box{
+        width: 20px;
+        height: 20px;
+        background-color: orange;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        border: 1px solid;
+       }
+.h{
+text-align: center;
+background-color: black;
+color: white;
+}
+
+    </style>
+</head>
+<body >
+    <div class="h">
+    <h1>CSS Day 2</h1>
+    <p>Box model spacing and layout technique</p>
+    </div>
+   <section class="r0">
+    <h2>
+        1. CSS Box Model
+    </h2>
+    <p>every element is a box considering at </p>
+    <ul>
+        <li>content</li>
+        <li>padding</li>
+        <li>border</li>
+        <li>margin</li>
+    </ul>
+</section>
+   
+   <section class="r1">
+    <h2>
+        2. Margin vs Padding
+    </h2>
+    <p><strong>padding:</strong>space inside the element </p>
+    <p><strong>Margin:</strong>space outside the element </p>
+</section>
+   <section class="r2">
+    <h2>3. Back ground styling</h2>
+    <p>This box has a background image and color</p>
+   </section>
+   <section class="r3">
+    <h2>4. Display properties</h2>
+    <p id="p1">BLOCK ELEMENT</p>
+    <div class="pp">
+    <p id="p2">inline  1</p>
+    <p id="p3">inline  2</p>
+   <p class="p4" style="padding: 10px;">inline <br>block</p> 
+    </div>
+   </section>
+   <section class="r5">
+    <h2>5.Flex box</h2>
+    <p>italian use flexbox</p>
+    <div class="bb">
+    <div class="box">1</div>
+    <div class="box">2</div>
+    <div class="box">3</div>
+    </div>
+</section>
+</body>
+</html>

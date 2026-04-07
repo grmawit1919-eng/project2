@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(68, 124, 124);
+}
+.h2{
+    color: brown;
+}
+.three{
+    color:goldenrd
+}
+#Project{
+    color: blueviolet;
+}
+nav ul {
+    margin: 30px;
+    gap: 20px;
+    display: flex;
+    list-style: none;
+}

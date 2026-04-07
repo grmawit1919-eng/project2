@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mekelle University</title>
+    <style>
+        body{
+            background-color: darkgrey;
+        }
+        img{
+            width: 500px;
+        }
+        header{
+            border: 1px dotted;
+            height: 200px;
+            background-color: beige;
+        }
+        h2{
+            text-align: center;
+            
+        }
+    ul{
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content:space-between;
+        
+    }
+    .card{
+      border: 1px solid ;
+      width: 300px;
+      margin-bottom: 20px;
+      
+    }
+    #c1{
+        background-color: rgb(214, 188, 104);
+        text-align:center;
+        
+    }
+
+    #c2{
+        background-color: rgb(133, 199, 47);
+        text-align: center;
+    }
+    
+    #c3{
+        background-color: rgb(214, 133, 167);
+    }
+    
+    #c4{
+        background-color: rgb(179, 110, 78);
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mekelle University Campus Life</h1>
+        <nav>
+            <ul>
+                <li><a href="#Home">Home</a></li>
+                <li><a href="#Departments">Departments</a></li>
+                <li><a href="#Facilities">Facilities</a></li>
+                <li><a href="#Events">Events</a></li>
+                <li><a href="#Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="Home">
+            <h2>Wellcome To Mekelle University</h2>
+            <p>Mekelle University stands as one of Ethiopia's premier institutiion of higher learning ,committed to acadamic exellence,inovative research,and holistic student development.</p>
+            <p><b>Your journey to exellence begins here!</b></p>
+            <img src="/image/mu.jpg" alt="mekelle university campus">
+        </section>
+        <section id="Departments">
+            <h2>Departments</h2>
+            <div class="card" id="c1">
+                <h3>computer science</h3>
+            <p>Computer science is one of the computing depatments .It's leading program in software enginnering ,AI,and data science</p>
+            <img src="">
+            </div>
+             <div class="card" id="c2">
+                <h3>Enginnering</h3>
+            <p>The Faculity of enginnering ofers comprehensive programs across multiple discipilines including Mechanicals,Industrials,Electricals and Civil enginnerings.</p>
+            <img src="">
+            </div>
+             <div class="card" id="c3">
+               <h3>Information Technology</h3>
+            <p>It prepares students tp manage,implement and secure technology systems that power modern organizations. </p>
+            <p>It covers Network Administration,Database Management,System Analysis and Design...</p>
+            <img src="">
+            </div>
+            <div class="card" id="c4">
+            <h3>Agriculture</h3>
+            <p>Is dedicated to advancing food security,sustainable farming practices,and rural development in Ethiopia.</p>
+            </div>
+        </section>
+        <section id="Facilities">
+            <h2>Facilities</h2>
+          <div class="fac">
+            <h3>Library</h3>
+            <img src="/image/library.jpg" width="500px" height="500px">
+            <p>Since its establishment in 1993, the Mekelle University Library System has grown remarkably.
+                 What began as a single classroom with donated and purchased books has transformed into a robust academic resource hub.
+                  With the official founding of Mekelle University in 2000, the library system expanded to include 11 branch libraries, two main library buildings, and a comprehensive digital library network.</p>
+             <h3>Sports Center</h3>
+             <IMG src="/image/jim.jpg" width="500px" height="400px">
+                </div>
+        </section>
+<section id="contact">  
+    <h2>Contact Forms</h2>
+        <fieldset>
+            <legend>Student Contact Form </legend>
+            <label for="name">Name:</label><br>
+            <input type="text" name="name" id="name" placeholder="name" required >
+            <br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" name="email" id="email" placeholder="email" required>
+            <br><br>
+             <label for="password">Password:</label><br>
+            <input type="password" name="password" id="password"  placeholder="password" required>
+             <br><br>
+             <label for="gender">Gender</label><br>
+             <input type="radio" name="gender">Male
+             <input type="radio" name="gender">Female
+             <br><br>
+             <label for="text">Message</label><br>
+             <textarea type="text" placeholder="text here"></textarea>
+             <br><br>
+             <a href="#"><input type="submit" value="Log in"/></a>
+             <input type="reset"/>
+        </fieldset>
+</section>
+    </main>
+    <footer>
+        <p>All Rights Reserved.&copy 2026 Mekelle University</p>
+        
+            <a href="#">About</a> <br>
+            <a href="#">Contact</a>
+        
+    </footer>
+</body>
+</html>
